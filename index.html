@@ -1,54 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Math Homework</title>
     <style>
-        main
-        {
-            border: 2px solid red;
-            padding: 10px;
-            width: fit-content;
-        }
-        h1 {
-            color: azure;
-            background-color: brown;
-            padding: 20px;
-            width: fit-content;
-            border-radius: 10px;
-            font-weight: bold;
-            padding-right: 80px;
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
         }
 
-        button {
-            background-color: green;
-            color: white;
-            width: 185px;
-            height: 60px;
-            border-radius: 30px;
-            font-size: 1.5rem;
-            font-weight: bolder;
-            border: none;
+        body {
+            background-color: #2c3e50;
+            ;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         p {
-            color: darkcyan;
+            background-color: #f1c40f;
+            color: gren;
+            padding: 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            padding-right: 8vw;
+        }
+
+        /* Button */
+        .btn {
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid #e74c3c;
+            border-radius: 0.6em;
+            color: #e74c3c;
+            cursor: pointer;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            align-self: center;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1;
+            margin: 20px;
+            padding: 1.2em 2.8em;
+            text-decoration: none;
             text-align: center;
-            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            color: #fff;
+            outline: 0;
+        }
+
+        .fourth {
+            border-color: #f1c40f;
+            color: #fff;
+            background-image: -webkit-linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+            background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+            background-position: 100%;
+            background-size: 400%;
+            -webkit-transition: background 300ms ease-in-out;
+            transition: background 300ms ease-in-out;
+        }
+
+        .fourth:hover {
+            background-position: 0;
+        }
+
+        @media screen and (max-width:1000px){
+            p {
+            background-color: #f1c40f;
+            color: gren;
+            padding: 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            padding-right: 20vw;
+        }
         }
     </style>
-    <script src="https://randojs.com/1.0.0.js"></script>
 </head>
 
 <body>
     <main>
-        <h1 id="demo1"></h1>
-        <h1 id="demo2"></h1>
-        <button onClick="window.location.reload();">Next</button>
-        <p>প্রিয়তোষ দাস</p>
+        <article id="first">
+            <p id="demo1"></p>
+            
+        </article>
+        
+        <article id="second">
+            <p id="demo2"></p>
+        </article>
+        
+        <button class="btn fourth" onClick="window.location.reload();">Next</button>
     </main>
     <script>
-        var randomNumber1 = Math.floor(Math.random() * (8));
-        var randomNumber2 = Math.floor(Math.random() * (1 + 8));
+
+        let range = 12
+        var randomNumber1 = Math.floor(Math.random() * (range));
+        var randomNumber2 = Math.floor(Math.random() * (range));
 
         for (let i = 1; i < 10; i++) {
             setTimeout(function myGreeting() {
@@ -56,12 +125,16 @@
             }, i * 50);
         }
 
-        var x = rando(1, 7);
-        var y = rando(x + 1, 8);
+        var x = Math.floor(Math.random() * (range));
+        var y = Math.floor(Math.random() * (range));
+
+        var maxElem = Math.max(x, y)
+        var minElem = Math.min(x, y)
+
 
         for (let i = 1; i < 10; i++) {
             setTimeout(function myGreeting() {
-                document.getElementById("demo2").innerHTML = `${y} - ${x} = `;
+                document.getElementById("demo2").innerHTML = `${maxElem} - ${minElem} = `;
             }, i * 50);
         }
     </script>
