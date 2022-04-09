@@ -1,119 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
-    <title>Sellfy - Home</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="index.css">
+    <style>
+        main
+        {
+            border: 2px solid red;
+            padding: 10px;
+            width: fit-content;
+        }
+        h1 {
+            color: azure;
+            background-color: brown;
+            padding: 20px;
+            width: fit-content;
+            border-radius: 10px;
+            font-weight: bold;
+            padding-right: 80px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            width: 185px;
+            height: 60px;
+            border-radius: 30px;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            border: none;
+        }
+
+        p {
+            color: darkcyan;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    </style>
+    <script src="https://randojs.com/1.0.0.js"></script>
 </head>
 
 <body>
-
-    <!--Top Bar Start-->
-    <div class="navbar-wrapper">
-    <header class="navbar">
-        <a href="./index.html"><img class="logo" src="./images/logo.png" alt="Sellify-Logo"></a>
-        <input class="search" type="text" placeholder="Start typing...">
-        <button class="button"> <a href="./login.html">Login</a> </button>
-        <button class="button"> <a href="./register.html">Register</a> </button>
-    </header>
-
-    <div class="navbar-main">
-        <li  onclick="location.href='#'">Home</li>
-        <li  onclick="location.href='#about'">About</li>
-        <li onclick="location.href='product.html'">Sell your phone</li>
-    </div>
-    </div>
-    <!--Top Bar End-->
-
-    <!--Main Container Start-->
     <main>
-        <aside>
-            <h5>Top Brands</h5>
-            <a href="product.html">Apple</a>
-            <a href="product.html">Samsung</a>
-            <a href="product.html">Xiaomi</a>
-            <a href="product.html">Realme</a>
-            <a href="product.html">Nokia</a>
-            <a href="product.html">Motorola</a>
-            <a href="product.html">Google</a>
-            <a href="product.html">Oppo</a>
-            <a href="product.html">Vivo</a>
-            <a href="product.html">Poco</a>
-            <a href="product.html">More</a>
-        </aside>
-        <section>
-            <img class="banner" src="./images/banner.jfif" alt="">
-        </section>
-        <nav>
-            <h5>Announements</h5>
-            <a href="./product.html">
-                <p>Now Avail 15%* Discount on selling second hand phones on Sellfy</p>
-                <br><br>
-            </a>
-            <a href="./product.html">
-                <p>15% Extra For Selling Samsung Foldable Phones</p>
-            </a>
-            <br><br>
-            <p>Sellfy Door to Door free pickup for phone over estimated value of 20000 or greater</p>
-            <br><br>
-            <p>Follow our official Instagram & twitter page, and chance to win iPhone 12</p>
-            <br><br>
-            <p>Flat 5% Extra on iPhones and iPads</p>
-        </nav>
+        <h1 id="demo1"></h1>
+        <h1 id="demo2"></h1>
+        <button onClick="window.location.reload();">Next</button>
+        <p>প্রিয়তোষ দাস</p>
     </main>
-    <!--Main Container End-->
+    <script>
+        var randomNumber1 = Math.floor(Math.random() * (8));
+        var randomNumber2 = Math.floor(Math.random() * (1 + 8));
 
-    <!--About Section Start-->
-    <div class="about" id="about">
+        for (let i = 1; i < 10; i++) {
+            setTimeout(function myGreeting() {
+                document.getElementById("demo1").innerHTML = `${randomNumber1} + ${randomNumber2} = `;
+            }, i * 50);
+        }
 
-        <main>
-            <aside>
-                <h5>Top Brands</h5>
-                <a href="product.html">Apple</a>
-                <a href="product.html">Samsung</a>
-                <a href="product.html">Xiaomi</a>
-                <a href="product.html">Realme</a>
-                <a href="product.html">Nokia</a>
-                <a href="product.html">Motorola</a>
-                <a href="product.html">Google</a>
-                <a href="product.html">Oppo</a>
-                <a href="product.html">Vivo</a>
-                <a href="product.html">Poco</a>
-                <a href="product.html">More</a>
-            </aside>
-            <section>
-                <img class="banner" src="./images/about.png" alt="">
-            </section>
-            <nav>
-                <h5>Announements</h5>
-                <a href="./product.html">
-                    <p>Now Avail 15%* Discount on selling second hand phones on Sellfy</p>
-                    <br><br>
-                </a>
-                <a href="./product.html">
-                    <p>15% Extra For Selling Samsung Foldable Phones</p>
-                </a>
-                <br><br>
-                <p>Sellfy Door to Door free pickup for phone over estimated value of 20000 or greater</p>
-                <br><br>
-                <p>Follow our official Instagram & twitter page, and chance to win iPhone 12</p>
-                <br><br>
-                <p>Flat 5% Extra on iPhones and iPads</p>
-            </nav>
-        </main>
-    </div>
-    <!--Main Section End-->
+        var x = rando(1, 7);
+        var y = rando(x + 1, 8);
 
-
-    <!--Footer Start-->
-    <footer>
-        <h5>Copyright @ 2022 Sellfy All rights reserved</h5>
-    </footer>
-    <!--Footer End-->
+        for (let i = 1; i < 10; i++) {
+            setTimeout(function myGreeting() {
+                document.getElementById("demo2").innerHTML = `${y} - ${x} = `;
+            }, i * 50);
+        }
+    </script>
 </body>
 
 </html>
