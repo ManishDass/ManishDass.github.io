@@ -36,6 +36,12 @@
             padding-right: 8vw;
         }
 
+
+        #object1, #object2
+        {
+            font-size: 0.8rem;
+        }
+
         /* Button */
         .btn {
             box-sizing: border-box;
@@ -87,15 +93,16 @@
             background-position: 0;
         }
 
-        @media screen and (max-width:1000px){
+        @media screen and (max-width:1000px) {
             p {
-            background-color: #f1c40f;
-            color: gren;
-            padding: 20px;
-            border-radius: 20px;
-            font-weight: 700;
-            padding-right: 20vw;
-        }
+                background-color: #f1c40f;
+                color: gren;
+                padding: 20px;
+                border-radius: 20px;
+                font-weight: 700;
+                width: 90vw;
+                
+            }
         }
     </style>
 </head>
@@ -104,13 +111,15 @@
     <main>
         <article id="first">
             <p id="demo1"></p>
-            
+            <p id="object1"></p>
+
         </article>
-        
+
         <article id="second">
             <p id="demo2"></p>
+            <p id="object2"></p>
         </article>
-        
+
         <button class="btn fourth" onClick="window.location.reload();">Next</button>
     </main>
     <script>
@@ -119,22 +128,40 @@
         var randomNumber1 = Math.floor(Math.random() * (range));
         var randomNumber2 = Math.floor(Math.random() * (range));
 
-        for (let i = 1; i < 10; i++) {
-            setTimeout(function myGreeting() {
-                document.getElementById("demo1").innerHTML = `${randomNumber1} + ${randomNumber2} = `;
-            }, i * 50);
-        }
-
         var x = Math.floor(Math.random() * (range));
         var y = Math.floor(Math.random() * (range));
 
         var maxElem = Math.max(x, y)
         var minElem = Math.min(x, y)
+ 
+        let arr1 = Array(randomNumber1).fill('🎈')
+        let finalString1 = arr1.join("");
+
+        let arr2 = Array(randomNumber2).fill('💎')
+        let finalString2 = arr2.join("");
+
+        let arr3 = Array(maxElem).fill('⚽')
+        let finalString3 = arr3.join("");
+
+        let arr4 = Array(minElem).fill('🏐')
+        let finalString4 = arr4.join("");
+
+
+
+
+        for (let i = 1; i < 10; i++) {
+            setTimeout(function myGreeting() {
+                document.getElementById("demo1").innerHTML = `${randomNumber1} + ${randomNumber2} = `;
+                document.getElementById("object1").innerHTML = `${finalString1} + ${finalString2} = `;
+
+            }, i * 50);
+        }
 
 
         for (let i = 1; i < 10; i++) {
             setTimeout(function myGreeting() {
                 document.getElementById("demo2").innerHTML = `${maxElem} - ${minElem} = `;
+                document.getElementById("object2").innerHTML = `${finalString3} - ${finalString4} = `;
             }, i * 50);
         }
     </script>
