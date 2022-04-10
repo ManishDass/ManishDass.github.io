@@ -14,10 +14,10 @@ let finalString1 = arr1.join("");
 let arr2 = Array(randomNumber2).fill('🏐')
 let finalString2 = arr2.join("");
 
-let arr3 = Array(maxElem).fill('⚽')
+let arr3 = Array(maxElem).fill('🍪')
 let finalString3 = arr3.join("");
 
-let arr4 = Array(minElem).fill('🏐')
+let arr4 = Array(minElem).fill('🤤')
 let finalString4 = arr4.join("");
 
 
