@@ -1,12 +1,23 @@
-let range = 12
-var randomNumber1 = Math.floor(Math.random() * (range));
-var randomNumber2 = Math.floor(Math.random() * (range));
+let endRange = 12
+var randomNumber1 = Math.floor(Math.random() * (endRange));
+var randomNumber2 = Math.floor(Math.random() * (endRange));
 
-var x = Math.floor(Math.random() * (range));
-var y = Math.floor(Math.random() * (range));
+var x = Math.floor(Math.random() * (endRange));
+var y = Math.floor(Math.random() * (endRange));
 
 var maxElem = Math.max(x, y)
 var minElem = Math.min(x, y)
+
+if(minElem === 0)
+{
+  minElem =+ 1;  
+}
+
+if(maxElem == minElem)
+{
+    maxElem += 1;
+}
+
 
 let arr1 = Array(randomNumber1).fill('⚽')
 let finalString1 = arr1.join("");
@@ -19,7 +30,6 @@ let finalString3 = arr3.join("");
 
 // let arr4 = Array(minElem).fill('🤤')
 // let finalString4 = arr4.join("");
-
 
 
 

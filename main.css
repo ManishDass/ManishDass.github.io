@@ -22,9 +22,8 @@ a {
     text-align: center;
     margin: 4rem 2rem 0rem 2rem;
     width: 100vw;
-    min-width: 600px;
+    min-width: 50px;
     max-width: 600px;
-
 }
 
 main {
@@ -33,6 +32,40 @@ main {
     justify-content: center;
     align-items: center;
     
+}
+
+@media screen and (max-width:412px)
+{
+    a {
+
+        text-decoration: none;
+        background-color: #f1c40f;
+        color: white;
+        padding: 30px;
+        border-radius: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin: 4rem 2rem 0rem 2rem;
+        width: 95%;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:306px)
+{
+    a {
+
+        text-decoration: none;
+        background-color: #f1c40f;
+        color: white;
+        padding: 20px;
+        border-radius: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin: 4rem 2rem 0rem 2rem;
+        width: 95%;
+        font-size: 0.6rem;
+    }
 }
 
 
