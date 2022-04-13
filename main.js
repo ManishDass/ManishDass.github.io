@@ -1,26 +1,26 @@
-let endRange = 12
-var randomNumber1 = Math.floor(Math.random() * (endRange));
-var randomNumber2 = Math.floor(Math.random() * (endRange));
+let min = 2;
+let max = 10;
 
-var x = Math.floor(Math.random() * (endRange));
-var y = Math.floor(Math.random() * (endRange));
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+  }
+
+
+var randomNumber1 = getRandomIntInclusive(min, max)
+var randomNumber2 = getRandomIntInclusive(min, max)
+  
+
+var x = getRandomIntInclusive(min, max)
+var y = getRandomIntInclusive(min, max)
 
 var maxElem = Math.max(x, y)
 var minElem = Math.min(x, y)
 
-if(minElem === 0)
-{
-  minElem =+ 1;  
-}
 
-if(maxElem == minElem)
-{
-    maxElem += 1;
-}
-
-
-let arr1 = Array(randomNumber1).fill('⚽')
-let finalString1 = arr1.join("");
+// let arr1 = Array(randomNumber1).fill('⚽')
+// let finalString1 = arr1.join("");
 
 let arr2 = Array(randomNumber2).fill('🏐')
 let finalString2 = arr2.join("");
@@ -28,15 +28,12 @@ let finalString2 = arr2.join("");
 let arr3 = Array(maxElem).fill('🍪') 
 let finalString3 = arr3.join("");
 
-// let arr4 = Array(minElem).fill('🤤')
-// let finalString4 = arr4.join("");
-
 
 
 for (let i = 1; i < 10; i++) {
     setTimeout(function myGreeting() {
         document.getElementById("demo1").innerHTML = `${randomNumber1} + ${randomNumber2} = `;
-        document.getElementById("object1").innerHTML = `${finalString1} + ${finalString2} = `;
+        document.getElementById("object1").innerHTML = ` ${finalString2} = `;
 
     }, i * 50);
 }
