@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
@@ -12,60 +14,73 @@ body {
 }
 
 a {
-
+    display: flex;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+   justify-content: center;
     text-decoration: none;
     background-color: #f1c40f;
     color: white;
-    padding: 30px;
-    border-radius: 20px;
-    font-weight: 700;
-    text-align: center;
-    margin: 4rem 2rem 0rem 2rem;
-    width: 100vw;
-    min-width: 50px;
-    max-width: 600px;
+    width: 80vw;
 }
 
-main {
+p {
     display: flex;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+   justify-content: center;
+    text-decoration: none;
+    background-color: #f1c40f;
+    color: white;
+    width: 80vw;
+    margin-bottom: 10px;
+}
+
+.index {
+    display: flex;
+    height: 80vh;
+    margin: 10vh 0;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around; 
     align-items: center;
-    
 }
 
-@media screen and (max-width:412px)
+.multiplication {
+    display: flex;
+    height: 80vh;
+    margin: 10vh 0;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.multiplication > a
 {
-    a {
-
-        text-decoration: none;
-        background-color: #f1c40f;
-        color: white;
-        padding: 30px;
-        border-radius: 20px;
-        font-weight: 700;
-        text-align: center;
-        margin: 4rem 2rem 0rem 2rem;
-        width: 95%;
-        font-size: 1.2rem;
-    }
+    padding: 15px;
+    font-size: 0.6rem;
+    margin-bottom: 0.4rem;
 }
 
-@media screen and (max-width:306px)
+.table {
+    display: flex;
+    height: 80vh;
+    margin: 10vh 0;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.table > a
 {
-    a {
-
-        text-decoration: none;
-        background-color: #f1c40f;
-        color: white;
-        padding: 20px;
-        border-radius: 20px;
-        font-weight: 700;
-        text-align: center;
-        margin: 4rem 2rem 0rem 2rem;
-        width: 95%;
-        font-size: 0.6rem;
-    }
+    padding: 15px;
+    font-size: 0.6rem;
+    margin-bottom: 0.4rem;
 }
+
+
 
 
