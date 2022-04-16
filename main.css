@@ -24,6 +24,7 @@ a {
     background-color: #f1c40f;
     color: white;
     width: 80vw;
+    max-width: 300px;
 }
 
 p {
@@ -37,6 +38,7 @@ p {
     background-color: #f1c40f;
     color: white;
     width: 80vw;
+    max-width: 300px;
     margin-bottom: 10px;
 }
 
