@@ -54,7 +54,6 @@ p {
 
 .multiplication {
     display: flex;
-    height: 80vh;
     margin: 10vh 0;
     flex-direction: column;
     justify-content: space-around; 
