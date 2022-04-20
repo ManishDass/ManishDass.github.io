@@ -1,5 +1,5 @@
 let min = 2;
-let max = 10;
+let max = 6;
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
