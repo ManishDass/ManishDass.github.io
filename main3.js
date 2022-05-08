@@ -38,6 +38,6 @@ let finalString1 = arr1.join("");
 for (let i = 1; i < 10; i++) {
     setTimeout(function myGreeting() {
         document.getElementById("nums").innerHTML = `${minElem} x ${maxElem} = `;
-       // document.getElementById("shapes").innerHTML = `${finalString1}  = `;
+        document.getElementById("shapes").innerHTML = `${finalString1}  = `;
     }, i * 50);
 }
