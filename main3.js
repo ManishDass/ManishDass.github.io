@@ -1,5 +1,5 @@
-let min1 = 2;
-let max1 = 5;
+let min1 = 3;
+let max1 = 9;
 
 function getRandomIntInclusive1(min1, max1) {
     min1 = Math.ceil(min1);
@@ -7,7 +7,7 @@ function getRandomIntInclusive1(min1, max1) {
     return Math.floor(Math.random() * (max1 - min1 + 1) + min1); //The maximum is inclusive and the minimum is inclusive
 }
 
-let min2 = 8;
+let min2 = 3;
 let max2 = 9;
 
 function getRandomIntInclusive2(min2, max2) {
